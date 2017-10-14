@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>FACEBOOK API</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel= "stylesheet" href="CSS/stylesheet1.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="20">
+<!----Front Section API for User--->
+ <div id="main_heading" class="jumbotron text-center container-fluid col-sm-12">
+  <div class="text-center">
+    <h1>FACEBOOK API</h1>
+  </div>
+  <form>
+    <div class="input-group">
+      <input type="text" class="form-control" id="accesstoken" size="20" placeholder="Enter your Access token here" required>
+      <div class="input-group-btn">
+        <button type="button" id="logbtn" class="btn btn-danger">LOGIN</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!---Container (Logout section cum navbar section) -- --->
+<div id="Logout" class="container-fluid1 text-center bg-grey col-sm-12">
+<h4 id="logoutbutton" float="right"><img src="" id="logou"/>&nbsp;LOGOUT</h1>
+<h4 id="user"><img src="" float="right" id="prof1"/>&nbsp;<span id="username">DP</span></h1>
+</div>
+<!-- Container (Profile Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>PROFILE</h2><br>
+  <img src="" alt="profileimg" id="profileimg">
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+       <h3 id="name1"><span id="name">SHIKHA</span></h3>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h3 id="age1"><span id="age">age</span></h3>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+       <h3 id="hometown1"><span id="hometown">hometown</span></h3>
+      </div>
+    </div>
+  </div>
+  </div>
+ 
+<!-- Container (Feed Section) -->
+<div id="FEED" class="container-fluid col-sm-12">
+ <div id="item4" class="container">
+					<h2 id="feedbttn"><span id="fbtn">click here&nbsp;!! </span>For your post</h2>
+					<div id="item-4a" class="container">
+					<span id="feed"></span>
+				</div>
+			
+</div>
+
+
+
+<footer class="container-fluid text-center col-sm-4" id="footerAPI">
+  <h2 class="text-center"><p id="Contact">Let's Get In Touch!</p></h2>
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-sm-4">
+                        <h3>Location</h3>
+                        <p>Bangalore</p>
+                    </div>
+                    <div class="footer-col col-sm-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+					<div class="footer-col col-sm-4">
+                        <h3> &#9742;</h3>
+                        <p>123-456-789</p>
+                    </div>
+					
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<script src="Jquery/script2.js"></script>
+</body>
+</html>
